@@ -10,8 +10,8 @@ from decimal import Decimal, InvalidOperation
 # FIXED SENDER AND RECEIVER DETAILS
 # ============================================================
 
-SENDER_NAME = "Aadarsh Kumar"
-SENDER_ID = "MS25A081"
+SENDER_NAME = "Kartikeya Tiwari"
+SENDER_ID = "MS26A028"
 SENDER_DEPARTMENT = "Department of Management Studies"
 INSTITUTE = "Indian Institute of Technology Madras"
 ADDRESS = "Chennai- 600036"
@@ -120,16 +120,16 @@ def choose_layout(item_count, text_length, payment_type):
         estimated_lines += 5
 
     if estimated_lines <= 29:
-        return 10, 1.0, 0.55, 0.70
+        return 12, 1.15, 0.55, 0.70
 
     elif estimated_lines <= 35:
-        return 9.5, 1.0, 0.45, 0.60
+        return 11, 1.15, 0.45, 0.60
 
     elif estimated_lines <= 41:
-        return 9, 0.95, 0.40, 0.55
+        return 11, 1, 0.40, 0.55
 
     else:
-        return 8, 0.90, 0.30, 0.50
+        return 10, 1, 0.30, 0.50
 
 
 def set_document_style(
@@ -306,10 +306,10 @@ def create_letter(
         "are attached for verification."
     )
 
+    line()
     line("Thanking you.")
     line()
     line("Yours sincerely,")
-    line()
     line(f"{SENDER_NAME} ({SENDER_ID})")
     line(COMMITTEE)
 
