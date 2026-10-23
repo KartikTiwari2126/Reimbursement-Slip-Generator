@@ -269,7 +269,9 @@ def create_letter(
         )
 
     line(subject, bold=True)
+    line()
     line(introduction)
+    line()
 
     # Itemized expenses
     for description, amount in items:
@@ -295,6 +297,7 @@ def create_letter(
             f"{vendor_name} using the following bank details:"
         )
 
+    line()
     line(f"Bank: {payment_details['bank_name']}")
     line(f"Account Number: {payment_details['account_number']}")
     line(f"Account Holder: {payment_details['account_holder']}")
