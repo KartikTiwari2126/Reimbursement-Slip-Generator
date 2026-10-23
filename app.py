@@ -303,6 +303,7 @@ def create_letter(
     line(f"Account Holder: {payment_details['account_holder']}")
     line(f"Branch: {payment_details['branch']}")
     line(f"IFSC: {payment_details['ifsc']}")
+    line()
 
     line(
         "The relevant invoice(s) and supporting bills "
